@@ -1,8 +1,47 @@
-html {
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+.App{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     font: 16px sans-serif;
+    background-color: rgb(26, 34, 59);
+    width: 100%;
+    height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: rgb(26, 34, 59);
-
-
 }
+/* .card{
+    position: relative;
+    overflow: visible; /* allow the scaled element to overflow the cell */
+    /* don't change margin/padding/font on hover — those affect layout */
+
+.card .card-inner{
+    display: inline-block;            /* isolate transform from table layout */
+    transform-origin: center center;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    will-change: transform;
+}
+.card{
+        transform: scale(1);
+        will-change: transform;
+        transition: transform 0.5s ease-out, border-radius 0.5s ease-out,
+                    box-shadow 0.35s ease-out, text-shadow 0.35s ease-out,
+                    padding 1s ease-in-out;
+    }
+
+.card:hover .card-inner{
+    transform: scale(1.5);
+    z-index: 10;                       
+}
+.card:hover{
+    transform: scale(1.10);
+    border-radius: 20px;
+    box-shadow: 1px 1px 30px rgb(255, 255, 255);
+    text-shadow: 1px 1px 5px rgb(255, 255, 255);
+    padding: 5px;    
+    transform-origin: center center;
+    transition: all 0.5s ease-out;
+    } 
