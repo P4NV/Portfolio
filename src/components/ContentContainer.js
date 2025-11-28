@@ -1,14 +1,21 @@
 import React, { useState } from 'react';
 import Projects from './pages/ProjectsPage';
+import SkillsPage from './pages/SkillsPage';
 
 export default function ContentContainer(){
     // Visible state (not a toggle) — you call `openProjects` to show,
     // and `closeProjects` to hide. This lets you drive a one-way entrance
     // animation from an initially invisible state.
     const [projectsVisible, setProjectsVisible] = useState(false);
-
     const openProjects = () => setProjectsVisible(true);
     const closeProjects = () => setProjectsVisible(false);
+
+    // for the second card = Skills and expertise
+
+    const [SkillsVisible, setSkillsVisible] = useState(false);
+    const openSkills = () => setSkillsVisible(true);
+    const closeSkills = () => setSkillsVisible(false)
+
 
     return (
         <>
@@ -17,21 +24,28 @@ export default function ContentContainer(){
                     <tr>
                         <td
                             role="button"
-                            tabIndex={0}
                             onClick={openProjects}
-                            onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') openProjects(); }}
-                            className="card border border-white text-center w-1/2 h-1/3 text-white select-none cursor-pointer"
-                        >
+                            className="card border border-white text-center w-1/2 h-1/3 text-white select-none ">
+
                             <div className="card-inner">
-                                <h2>About Me</h2>
-                                <p>This is a brief introduction about myself.</p>
-                                <p className="text-sm mt-2 italic">Click to show Projects</p>
+                                <h2>My work / projects</h2>
+                                <br/>
+                                <hr/>
+                                <br/>
+                                <p>This is a brief introduction what im capable of</p>
                             </div>
                         </td>
-                        <td className="card border border-white text-center w-1/2 h-1/3 text-white">
+                        <td 
+                            role='button'
+                            onClick={openSkills}
+                            className="card border border-white text-center w-1/2 h-1/3 text-white">
+                            
                             <div className="card-inner">
-                                <h2>Skills</h2>
-                                <p>Here are some of my skills and expertise.</p>
+                                <h2>Skills and Expertise</h2>
+                                <br/>
+                                <hr/>
+                                <br/>
+                                <p>Here are some of my skills and expertise</p>
                             </div>
                         </td>
                     </tr>
@@ -52,14 +66,19 @@ export default function ContentContainer(){
                     <tr>
                         <td className="card border border-white text-center w-1/2 h-1/3 text-white">
                             <div className="card-inner">
-                                <h2>Contact</h2>
-                                <p>Feel free to reach out to me!</p>
+                                <h2>Little about myself</h2>
+                                <p></p>
                             </div>
                         </td>
                         <td className="card border border-white text-center w-1/2 h-1/3 text-white">
                             <div className="card-inner">
-                                <h2>Skills</h2>
-                                <p>Here are some of my skills and expertise.</p>
+                                <h2>Contact</h2>
+                                <p>Feel free to reach out to me!</p>
+                                <div>
+                                    <a href="mailto:ex000static@gmail.com" className="text-blue-400 underline">img-placeholder</a>
+                                    <a>linkedin-placeholder</a>
+                                    <a>github-placeholder</a>
+                                </div>
                             </div>
                         </td>
                     </tr>
@@ -83,6 +102,26 @@ export default function ContentContainer(){
                 </div>
                 <div className="mt-2 h-full overflow-auto">
                     <Projects />
+                </div>
+            </div>
+
+            {/* skills card container */}
+            
+            <div
+                className={`Skills-container ${SkillsVisible ? 'show' : ''}`}
+                aria-hidden={!SkillsVisible}
+            >
+                <div className="flex justify-end">
+                    <button
+                        onClick={closeSkills}
+                        className="mx-2 px-3 py-2 bg-red-600 text-white rounded-lg"
+                        aria-label="Close skills"
+                    >
+                        Close
+                    </button>
+                </div>
+                <div className="mt-2 h-full overflow-auto flex flex-wrap items-center justify-center box-content">
+                    <SkillsPage />
                 </div>
             </div>
         </>
