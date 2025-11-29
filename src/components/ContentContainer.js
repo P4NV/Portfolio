@@ -120,7 +120,10 @@ export default function ContentContainer(){
                         Close
                     </button>
                 </div>
-                <div className="mt-2 h-full overflow-auto flex flex-wrap items-center justify-center box-content">
+                <div>
+                   <p>dfsdgasgasgasgasdg</p>
+                </div>
+                <div className="mt-96 overflow-hidden flex  items-center justify-center box-content">
                     <SkillsPage />
                 </div>
             </div>
