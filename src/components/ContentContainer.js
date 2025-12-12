@@ -49,79 +49,96 @@ export default function ContentContainer(){
 
 
     return (
-        <>
-            <table className="h-4/6 w-8/12 table-fixed border-separate border-spacing-y-4 border-spacing-x-8 mt-10  m-auto p-2 overflow-visible ">
-                <tbody>
-                    <tr>
-                        <td
-                            role="button"
-                            onClick={openProjects}
-                            className="card border border-white rounded-lg text-center w-1/2 h-1/3 text-white select-none ">
+    <>
+        <div className="content-container
+            grid grid-cols-10
+            gap-y-8 gap-x-8
+            overflow-visible
+            w-5/12 h-3/4
+            mt-20 mb-20 mx-auto  p-2
+        ">
 
-                            <div className="card-inner">
-                                <h2>My work / projects</h2>
-                                <br/>
-                                <hr/>
-                                <br/>
-                                <p>This is a brief introduction what im capable of</p>
-                            </div>
-                        </td>
-                        <td 
-                            role='button'
-                            onClick={openSkills}
-                            className="card border border-white rounded-lg text-center w-1/2 h-1/3 text-white">
-                            
-                            <div className="card-inner">
-                                <h2>Skills and Expertise</h2>
-                                <br/>
-                                <hr/>
-                                <br/>
-                                <p>Here are some of my skills and expertise</p>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td
-                            role='button'
-                            onClick={openExperience}
-                            className="card border border-white rounded-lg text-center w-1/2 h-1/3 text-white">
-                            <div className="card-inner">
-                                <h2>Experience</h2>
-                                <br/>
-                                <hr/>
-                                <br/>
-                                <p>What i've experienced so far</p>
-                            </div>
-                        </td>
-                        <td 
-                            role='button'
-                            onClick={openPage4}
-                            className="card border border-white rounded-lg text-center w-1/2 h-1/3 text-white">
-                            <div className="card-inner">
-                                <h2 style={{fontSize: '5.5rem'}}>-W.I.P-</h2>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td 
-                            role='button'
-                            onClick={openPage5}
-                            className="card border border-white rounded-lg text-center w-1/2 h-1/3 text-white">
-                            <div className="card-inner">
-                                <h2 style={{fontSize:'5.5rem'}}>-W.I.P-</h2>
-                            </div>
-                        </td>
-                        <td 
-                            role='button'
-                            onClick={openPage6}
-                            className="card border border-white rounded-lg text-center w-1/2 h-1/3 text-white">
-                            <div className="card-inner">
-                                <h2 style={{fontSize:'5.5rem'}}>-W.I.P-</h2>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            {/* My work / projects */}
+            <div
+                role="button"
+                onClick={openProjects}
+                className="card col-span-7 col-start-2 col-end-10 border border-white rounded-lg text-center text-white select-none p-4 flex flex-col items-center justify-center"
+            >
+                <div className="card-inner">
+                    <h2>My work / projects</h2>
+                    <br />
+                    <hr />
+                    <br />
+                    <p>This is a brief introduction what I'm capable of</p>
+                </div>
+            </div>
+
+            {/* Skills */}
+            <div
+                role="button"
+                onClick={openSkills}
+                className="card col-span-5 col-start-1 col-end-6 border border-white rounded-lg text-center text-white select-none p-4 flex flex-col items-center justify-center"
+            >
+                <div className="card-inner">
+                    <h2>Skills and Expertise</h2>
+                    <br />
+                    <hr />
+                    <br />
+                    <p>Here are some of my skills and expertise</p>
+                </div>
+            </div>
+
+            {/* Experience */}
+            <div
+                role="button"
+                onClick={openExperience}
+                className="card col-span-5  col-end-11 border border-white rounded-lg text-center text-white select-none p-4 flex flex-col items-center justify-center"
+            >
+                <div className="card-inner">
+                    <h2>Experience</h2>
+                    <br />
+                    <hr />
+                    <br />
+                    <p>What I've experienced so far</p>
+                </div>
+            </div>
+
+            {/* WIP 4 */}
+            <div
+                role="button"
+                onClick={openPage4}
+                className="card col-span-5 col-start-1 col-end-6 border border-white rounded-lg text-center text-white select-none p-4 flex flex-col items-center justify-center"
+            >
+                <div className="card-inner">
+                    <h2 style={{ fontSize: "5.5rem" }}>-W.I.P-</h2>
+                </div>
+            </div>
+
+            {/* WIP 5 */}
+            <div
+                role="button"
+                onClick={openPage5}
+                className="card col-span-5  col-end-11 border border-white rounded-lg text-center text-white select-none p-4 flex flex-col items-center justify-center"
+            >
+                <div className="card-inner">
+                    <h2 style={{ fontSize: "5.5rem" }}>-W.I.P-</h2>
+                </div>
+            </div>
+
+            {/* WIP 6 */}
+            <div
+                role="button"
+                onClick={openPage6}
+                className="card col-span-10 col-start-1 col-end-11 border border-white rounded-lg text-center text-white select-none p-4 flex flex-col items-center justify-center"
+            >
+                <div className="card-inner">
+                    <h2 style={{ fontSize: "5.5rem" }}>-W.I.P-</h2>
+                </div>
+            </div>
+
+        </div>
+
+
 
             {/* Projects overlay — keep it in the DOM but invisible by default so
                 you can animate it in. Use the `show` class to drive the entrance. */}

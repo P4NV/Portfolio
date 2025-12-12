@@ -8,11 +8,17 @@ import ContactWhite from "../public/icons/telephoneWhite.png"
 export default function Header() {
     
     return (
-        <>
+        <header className="sticky-header ">
+            <div className='background'>
+                <div class="stars"></div>
+                </div>
+            
             <div className="w-2/5 h-16  mt-16 rounded-3xl flex items-center 
-                            bg-transparent shadow-inner shadow-white"  >
+                            bg-transparent shadow-inner shadow-white
+                            max-[391px]:w-9/12 max-[391px]:h-14"  >
 
-                <h1 className="text-3xl text-white m-auto">Front-End developer</h1>
+                <h1 className="text-3xl text-white m-auto
+                               max-[391px]:text-2xl">Front-End developer</h1>
                 
             </div>
             <div className="Icons flex gap-6 text-white shadow-inner shadow-white bg-white bg-opacity-10 px-6 py-1  rounded-3xl mt-4">
@@ -33,7 +39,7 @@ export default function Header() {
                 </a>
 
             </div>
-        </>
+    </header>
     );
 
 

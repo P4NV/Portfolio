@@ -10,20 +10,27 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
+  scrollbar-width: none;
 }
 .App{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     font: 16px sans-serif;
     background: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
-    overflow: hidden;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
+}
+
+.sticky-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Shared icon wrapper */
@@ -71,7 +78,6 @@
 #Phone-Icon:hover .hover {
   opacity: 1;
   transform: scale(1.1);          /* slight grow */
-  box-shadow: 0 0 20px white;     /* soft glow */
   transition: opacity 0.35s ease, transform 0.3s ease, box-shadow 0.5s ease;
 }
 
@@ -133,12 +139,12 @@
   top: 70%;
   left: -100px;
   animation-delay: 4s;
-}  
+}
 .shooting-star:nth-child(7) {
   top: 10%;
   left: -100px;
   animation-delay: 5s;
-}  
+}
 
 @keyframes twinkle {
   0%,
@@ -178,11 +184,17 @@
   animation: twinkle 6s infinite linear reverse;
 }
 
+.card-inner{
+
+  margin: auto;
+  padding: auto;
+
+}
 
 .card .card-inner{
     display: inline-block;            /* isolate transform from table layout */
     transform-origin: center center;
-    transition: transform 0.35s ease, 
+    transition: transform 0.35s ease,
                 box-shadow 0.35s ease;
     will-change: transform;
 }
@@ -199,7 +211,7 @@
 
 .card:hover .card-inner{
     transform: scale(1.2);
-    z-index: 10;                       
+    z-index: 10;
 }
 .card:hover{
     transform: scale(1.1);
@@ -208,12 +220,11 @@
     border: transparent;
     box-shadow: 1px 1px 30px rgb(255, 255, 255);
     text-shadow: 1px 1px 5px rgb(255, 255, 255);
-    padding: 5px;    
     transform-origin: center center;
     transition: all 0.5s ease-out;
-    } 
+    }
 
-    /****************************************************** 
+    /******************************************************
         this is a basic transform/transition for these cards
     ******************************************************/
 
@@ -227,23 +238,23 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    
+
     /* small and slightly lower */
     transform: translate(-50%, -50%) scale(0.1);
-    
+
     width: 65%;   /* final width */
     height: 70%;  /* final height */
     background-color: #bfc4ee;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0px 4px 24px rgb(255, 255, 255);
-    
+
     z-index: 50;
     opacity: 0;
     pointer-events: none;
 
     /* animate opacity, transform */
-    transition: 
+    transition:
         transform 800ms cubic-bezier(.2,.9,.2,1),
         opacity 420ms cubic-bezier(.2,.9,.2,1);
 }
@@ -251,7 +262,7 @@
 
 
 .Projects-container.show,
-.Skills-container.show, 
+.Skills-container.show,
 .Experience-container.show,
 .Page4-container.show,
 .Page5-container.show,
@@ -263,13 +274,25 @@
     pointer-events: auto;
 }
 
-    /***************************************************** 
+    /*****************************************************
         this is a basic transform/transition for these cards
     ******************************************************/
 
 
-/* small responsive tweak */
+/* tablet */
+@media (max-width: 1024px) {
+  .content-container {
+    width: 85%;
+  }
+}
+
+/* mobile landscape & tablet portrait*/
 @media (max-width: 768px) {
+    .content-container {
+      grid-template-columns: 1fr;
+      width: 90%;
+    }
+
     .Projects-container,
     .Skills-container,
     .Experience-container,
@@ -279,6 +302,83 @@
         width: 90%;
         top: 50%;
         height: 76%;
+    }
+}
+
+
+/* mobile portrait */
+@media (max-width: 391px){
+
+    .content-container {
+      width: 90%;
+    }
+
+    .sticky-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 1rem;
+      background: linear-gradient(to bottom, #0b0b2b, #1b2735 50%, #0b0b2b);
+    }
+
+    .card{
+      height: 180px;
+    }
+
+    .card h2 {
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+    }
+
+    .card h2[style*="font-size: 5.5rem"] {
+      font-size: 3.5rem !important;
+    }
+
+    /************** Icons ****************/
+          /* Shared icon wrapper */
+      #Mail-Icon, #Git-Icon, #Phone-Icon {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+      }
+
+      /* Base + hover stacked */
+      #Mail-Icon img,
+      #Git-Icon img,
+      #Phone-Icon img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 30px;
+        height: 30px;
+        transition: opacity 0.35s ease,
+                    transform 0.3s ease,
+                    box-shadow 0.5s ease;
+      }
+    /************ Icons ****************/
+
+
+    .Projects-container.show,
+    .Skills-container.show,
+    .Experience-container.show,
+    .Page4-container.show,
+    .Page5-container.show,
+    .Page6-container.show {
+        width: 100%;
+        height: 82%;
+        border-radius: 0;
+        opacity: 1;
+        position: fixed;
+        transform: translate(-50%, -38%) ;
+        pointer-events: auto;
     }
 }
 
