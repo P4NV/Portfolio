@@ -55,7 +55,7 @@ export default function ContentContainer(){
             gap-y-8 gap-x-8
             overflow-visible
             w-5/12 h-3/4
-            mt-20 mb-20 mx-auto  p-2
+            mt-20 mb-20 mx-auto p-2
         ">
 
             {/* My work / projects */}
@@ -66,9 +66,7 @@ export default function ContentContainer(){
             >
                 <div className="card-inner">
                     <h2>My work / projects</h2>
-                    <br />
-                    <hr />
-                    <br />
+                    <hr className='m-4'/>
                     <p>This is a brief introduction what I'm capable of</p>
                 </div>
             </div>
@@ -81,9 +79,7 @@ export default function ContentContainer(){
             >
                 <div className="card-inner">
                     <h2>Skills and Expertise</h2>
-                    <br />
-                    <hr />
-                    <br />
+                    <hr className='m-4'/>
                     <p>Here are some of my skills and expertise</p>
                 </div>
             </div>
@@ -96,9 +92,7 @@ export default function ContentContainer(){
             >
                 <div className="card-inner">
                     <h2>Experience</h2>
-                    <br />
-                    <hr />
-                    <br />
+                    <hr className='m-4'/>
                     <p>What I've experienced so far</p>
                 </div>
             </div>
@@ -110,7 +104,9 @@ export default function ContentContainer(){
                 className="card col-span-5 col-start-1 col-end-6 border border-white rounded-lg text-center text-white select-none p-4 flex flex-col items-center justify-center"
             >
                 <div className="card-inner">
-                    <h2 style={{ fontSize: "5.5rem" }}>-W.I.P-</h2>
+                    <h2>-W.I.P-</h2>
+                    <hr className='m-4'/>
+                    <p>Stil in progress</p>
                 </div>
             </div>
 
@@ -121,7 +117,9 @@ export default function ContentContainer(){
                 className="card col-span-5  col-end-11 border border-white rounded-lg text-center text-white select-none p-4 flex flex-col items-center justify-center"
             >
                 <div className="card-inner">
-                    <h2 style={{ fontSize: "5.5rem" }}>-W.I.P-</h2>
+                    <h2>-W.I.P-</h2>
+                    <hr className='m-4'/>
+                    <p>Stil in progress</p>
                 </div>
             </div>
 
@@ -132,7 +130,9 @@ export default function ContentContainer(){
                 className="card col-span-10 col-start-1 col-end-11 border border-white rounded-lg text-center text-white select-none p-4 flex flex-col items-center justify-center"
             >
                 <div className="card-inner">
-                    <h2 style={{ fontSize: "5.5rem" }}>-W.I.P-</h2>
+                    <h2>-W.I.P-</h2>
+                    <hr className='m-4'/>
+                    <p>Stil in progress</p>
                 </div>
             </div>
 

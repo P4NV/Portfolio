@@ -188,6 +188,8 @@
 
   margin: auto;
   padding: auto;
+  max-width: 75%;
+  min-width: 45%;
 
 }
 
@@ -282,7 +284,19 @@
 /* tablet */
 @media (max-width: 1024px) {
   .content-container {
-    width: 85%;
+    width: 75%;
+  }
+  .Projects-container.show,
+  .Skills-container.show,
+  .Experience-container.show,
+  .Page4-container.show,
+  .Page5-container.show,
+  .Page6-container.show {
+      width: 80%;
+      height: 70%;
+      opacity: 1;
+      transform: translate(-50%, -38%) ;
+      pointer-events: auto;
   }
 }
 
@@ -311,6 +325,18 @@
 
     .content-container {
       width: 90%;
+      grid-template-columns: 1;
+
+    }
+    .content-container .card {
+      
+      grid-column: 1;
+
+    }
+    .content-container .card-inner {
+      width: 75%;
+      font-size: 0.5em;
+
     }
 
     .sticky-header {
