@@ -24,14 +24,16 @@ export default function Projects(){
         <div>
             <h1 className="text-white text-center mt-10">Projects Page</h1>
             <div className="container mx-auto px-4 mt-8">
-                <div className="grid grid-rows-5 grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {Projects.map((project) => (
                         <div
                             key={project.id}
-                            className="bg-gray-800 text-white p-4 rounded flex flex-col items-center justify-center"
+                            className=" bg-white bg-opacity-10 shadow-inner shadow-white text-white p-4 rounded flex flex-col items-center justify-center"
                         >
-                            <h3>{project.title}</h3>
-                            <p className="text-sm">{project.description}</p>
+                            <div>
+                                <h3>{project.title}</h3>
+                                <p className="text-sm">{project.description}</p>
+                            </div>
                         </div>
                     ))}
                 </div>
