@@ -1,0 +1,87 @@
+.card-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 380px;
+    height: 220px;
+    background-color: #6d809f86;
+    border-radius: 50px;
+    box-shadow: 1px 1px 15px rgba(255, 255, 255, 0.397);
+
+    transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+    background-color: #8195b4;
+}
+
+/* EXPAND animation */
+.expanded-card-button {
+    position: fixed;
+    animation: expandCard 1.3s ease-out forwards;
+    z-index: 10;
+}
+
+/* CONTRACT animation */
+.collapsing-card-button {
+    position: fixed;
+    animation: collapseCard 1.3s ease-out forwards;
+    z-index: 10;
+}
+
+    /* Keyframes for expanding */
+@keyframes expandCard {
+    0% {
+        top: 350px;
+        width: 180px;
+        height: 120px;
+        background-color: #6d809f86;
+    }
+    40% {
+        top: 350px;
+        width: 850px;
+        height: 500px;
+        background-color: #8195b4;
+    }
+    55% {
+        top: 350px;
+        width: 850px;
+        height: 500px;
+        background-color: #8195b4;
+    }
+    100% {
+        top: 270px;
+        width: 1200px;
+        height: 680px;
+        background-color: #8195b4;
+    }
+}
+
+/* Keyframes for contracting (reverse of expand) */
+@keyframes collapseCard {
+    0% {
+        top: 270px;
+        width: 1200px;
+        height: 680px;
+        background-color: #8195b4;
+    }
+    40% {
+        top: 350px;
+        width: 850px;
+        height: 500px;
+        background-color: #8195b4;
+    }
+    55% {
+        top: 350px;
+        width: 850px;
+        height: 500px;
+        background-color: #8195b4;
+    }
+    100% {
+        width: 0px;
+        height: 0px;
+        background-color: #6d809f86;
+    }
+}
+

@@ -2,9 +2,10 @@ import { useState } from 'react';
 import './App.css';
 
 import Head from './components/head.jsx';
-import Cards from './components/card.jsx';
+import Cardbuttons from './components/Cardbuttons.jsx';
 
 function App() {
+
 
   return (
     <>
@@ -23,12 +24,14 @@ function App() {
       </div>
       <div className='content-container'>
         <Head />
-        <div className='card-container'>
-          <Cards/>
-          <Cards/>
-          <Cards/>
-          <Cards/>
+      <div className='button-wrapper'>
+        <div className='button-container'>
+          <Cardbuttons title="Projects" description="my projects"/>
+          <Cardbuttons title="About me" description="my Life"/>
+          <Cardbuttons title="Experience" description="Somesome"/>
+          <Cardbuttons title="Projects" description="my projects"/>
         </div>
+      </div>
       </div>
     </>
   )}
