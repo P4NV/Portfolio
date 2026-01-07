@@ -1,8 +1,7 @@
-import { useState } from 'react';
 import './App.css';
 
 import Head from './components/head.jsx';
-import Cardbuttons from './components/Cardbuttons.jsx';
+import ExpandableCard from './components/Cardbuttons.jsx';
 
 function App() {
 
@@ -26,10 +25,22 @@ function App() {
         <Head />
       <div className='button-wrapper'>
         <div className='button-container'>
-          <Cardbuttons title="Projects" description="my projects"/>
-          <Cardbuttons title="About me" description="my Life"/>
-          <Cardbuttons title="Experience" description="Somesome"/>
-          <Cardbuttons title="Projects" description="my projects"/>
+          <ExpandableCard title="Projects" preview="My projects">
+            <p>🚀 Project One</p>
+            <p>🚀 Project Two</p>
+          </ExpandableCard>
+          <ExpandableCard title="Projects" preview="My projects">
+            <p>🚀 Project One</p>
+            <p>🚀 Project Two</p>
+          </ExpandableCard>
+          <ExpandableCard title="Projects" preview="My projects">
+            <p>🚀 Project One</p>
+            <p>🚀 Project Two</p>
+          </ExpandableCard>
+          <ExpandableCard title="Projects" preview="My projects">
+            <p>🚀 Project One</p>
+            <p>🚀 Project Two</p>
+          </ExpandableCard>
         </div>
       </div>
       </div>

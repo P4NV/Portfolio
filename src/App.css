@@ -11,7 +11,7 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: radial-gradient(ellipse at center, #000010 5%,white 450%); /* first simple design */
+  background: radial-gradient(ellipse at center, #010125 65%,white 250%); /* first simple design */
   /*background: radial-gradient(ellipse at center, black 15%, white 30%, #000010 55%); /* second complex design */
   z-index: -1;
 

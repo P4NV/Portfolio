@@ -2,6 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 20px;
 
     width: 380px;
     height: 220px;
@@ -9,18 +11,42 @@
     border-radius: 50px;
     box-shadow: 1px 1px 15px rgba(255, 255, 255, 0.397);
 
+    font-size: 1.3em;
+
     transition: background-color 0.3s ease;
+}
+.expanded-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.close-button {
+  align-self: flex-end;
+  background: transparent;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.close-button:hover {
+  opacity: 0.7;
 }
 
 .card-button:hover {
     background-color: #8195b4;
 }
-
 /* EXPAND animation */
 .expanded-card-button {
     position: fixed;
-    animation: expandCard 1.3s ease-out forwards;
+    animation: expandCard 1.6s ease-out forwards;
     z-index: 10;
+    justify-content: flex-start;
+    overflow-y: auto;
+    scrollbar-width: none;
+    padding: 50px;
 }
 
 /* CONTRACT animation */
@@ -28,23 +54,42 @@
     position: fixed;
     animation: collapseCard 1.3s ease-out forwards;
     z-index: 10;
+    justify-content: flex-start;
+    padding: 50px;
 }
 
     /* Keyframes for expanding */
 @keyframes expandCard {
     0% {
-        top: 350px;
+        top: 400px;
         width: 180px;
         height: 120px;
         background-color: #6d809f86;
+        opacity: 0;
     }
-    40% {
+    /* up to here */
+    20%{
+        top: 500px;
+        width: 380px;
+        height: 220px;
+        background-color: #6d809f86;
+    }
+    /* pause */
+    30%{
+        top: 500px;
+        width: 380px;
+        height: 220px;
+        background-color: #6d809f86;
+    }
+    /* up to here */
+    65% {
         top: 350px;
         width: 850px;
         height: 500px;
         background-color: #8195b4;
     }
-    55% {
+    /* pause */
+    80%{
         top: 350px;
         width: 850px;
         height: 500px;
@@ -55,6 +100,7 @@
         width: 1200px;
         height: 680px;
         background-color: #8195b4;
+        opacity: 100%;
     }
 }
 
@@ -79,9 +125,11 @@
         background-color: #8195b4;
     }
     100% {
-        width: 0px;
-        height: 0px;
-        background-color: #6d809f86;
+        top: 500px;
+        width: 20px;
+        height: 20px;
+        opacity: 0;
+        background-color: #6d809f86
     }
 }
 
