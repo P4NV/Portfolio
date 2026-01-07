@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./cardButtons.css";
+import Close from "../assets/close.png"
 
 export default function ExpandableCard({
   title,
@@ -63,7 +64,7 @@ export default function ExpandableCard({
             className="close-button"
             onClick={closeCard}
           >
-            ✕ Close
+            <img src={Close}/>
           </button>
 
           {children}

@@ -24,20 +24,20 @@ function App() {
       <div className='content-container'>
         <Head />
       <div className='button-wrapper'>
-        <div className='button-container'>
-          <ExpandableCard title="Projects" preview="My projects">
+        <div className='button-container '>
+          <ExpandableCard title="About Me" preview="My role & mindset">
             <p>🚀 Project One</p>
             <p>🚀 Project Two</p>
           </ExpandableCard>
-          <ExpandableCard title="Projects" preview="My projects">
+          <ExpandableCard title="Projects" preview="Selected work">
             <p>🚀 Project One</p>
             <p>🚀 Project Two</p>
           </ExpandableCard>
-          <ExpandableCard title="Projects" preview="My projects">
+          <ExpandableCard title="Experience" preview="Development path">
             <p>🚀 Project One</p>
             <p>🚀 Project Two</p>
           </ExpandableCard>
-          <ExpandableCard title="Projects" preview="My projects">
+          <ExpandableCard title="Beyond Code" preview={`Thinking in systems,\nbuilding hands-on`}>
             <p>🚀 Project One</p>
             <p>🚀 Project Two</p>
           </ExpandableCard>

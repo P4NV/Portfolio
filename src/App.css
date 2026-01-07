@@ -164,5 +164,18 @@
   width:1000px;
   column-gap: 50px;
   row-gap: 50px;
-  line-height: 1px ;
+  line-height: 2;
+}
+.card-button:nth-child(4) p {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  max-width: 300px;
+  line-height: 20px;
+}
+
+/* Expanded state - straightened text */
+.expanded-card-button:nth-child(4) p {
+  flex-wrap: nowrap;
+  max-width: none;
 }
