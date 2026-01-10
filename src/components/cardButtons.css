@@ -17,17 +17,20 @@
 }
 .expanded-content {
     width: 100%;
+    padding-top: 20px;
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 .close-button {
-  align-self: flex-end;
-  background: transparent;
-  border: none;
-  width: 50px;
-  color: #fff;
-  margin-bottom: 20px;
+    align-self: flex-end;
+    background: transparent;
+    position: sticky !important;
+    top: 20px;
+    border: none;
+    width: 50px;
+    color: #fff;
+    margin-bottom: 0;
 }
 
 .close-button:hover {
@@ -67,28 +70,29 @@
         opacity: 0;
     }
     /* up to here */
-    20%{
+    10%{
         top: 500px;
         width: 380px;
         height: 220px;
         background-color: #6d809f86;
     }
     /* pause */
-    30%{
+    15%{
         top: 500px;
         width: 380px;
         height: 220px;
         background-color: #6d809f86;
     }
     /* up to here */
-    65% {
+    45% {
         top: 350px;
         width: 850px;
         height: 500px;
+        opacity: 95%;
         background-color: #8195b4;
     }
     /* pause */
-    80%{
+    60%{
         top: 350px;
         width: 850px;
         height: 500px;
@@ -109,12 +113,14 @@
         top: 270px;
         width: 1200px;
         height: 680px;
+        opacity: 1;
         background-color: #8195b4;
     }
     40% {
         top: 350px;
         width: 850px;
         height: 500px;
+        opacity: 1;
         background-color: #8195b4;
     }
     55% {
@@ -131,4 +137,3 @@
         background-color: #6d809f86
     }
 }
-

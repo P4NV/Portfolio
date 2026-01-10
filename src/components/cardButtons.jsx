@@ -47,11 +47,12 @@ export default function ExpandableCard({
       onClick={!expanded ? openCard : undefined}
       onAnimationEnd={handleAnimationEnd}
     >
+    <div className="card-content w-full flex flex-col text-center justify-center ">
       <h1>{title}</h1>
+      <hr className="bg-[#a6b6cf] mx-auto w-2/3 h-2 border-2 rounded-4xl shadow-md shadow-[#8993a3] " />
+    </div>
 
-      <hr className="bg-[#a6b6cf] w-2/3 h-2 rounded-4xl shadow-md shadow-[#8993a3]" />
-
-      {!showExpandedContent && (
+    {!showExpandedContent && (
         <p>{preview}</p>
       )}
 

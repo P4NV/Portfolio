@@ -4,6 +4,14 @@
 * {
   color: white;
 }
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari and Opera */
+}
 /* background stars */
 
 .background {
@@ -49,7 +57,7 @@
   animation: shoot 3s infinite ease-in;
 }
 .shooting-star:nth-child(1) {
-  top:  0%;
+  top:  0;
   left: -100px;
   animation-delay: 0s;
 }
